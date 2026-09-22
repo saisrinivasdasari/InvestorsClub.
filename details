@@ -1,0 +1,1629 @@
+theme:-
+Change ONLY the colors of the existing website template to match the Investors Club brand.
+
+Primary Navy: #0B1F3A
+Dark Navy: #071629
+Green: #4F7F3A
+Dark Green: #35652D
+Gold: #F2C94C
+Soft Gold: #F8E7A5
+Background: #F7F9FC
+White: #FFFFFF
+Primary Text: #172033
+Secondary Text: #667085
+Border: #E4E8EF
+
+Navy = Trust
+Green = Growth & Collaboration
+Gold = Opportunity & Premium accent
+White = Clarity
+
+Use Navy + White as the main theme.
+Use Green as the secondary accent.
+Use Gold very sparingly.
+
+Do NOT change the existing template's layout, typography, spacing, components, animations, content, or functionality.
+
+Only replace the existing color palette with this Investors Club theme.
+
+
+Act as a Senior Product Manager, Business Strategist, UX/UI Designer, Brand Designer, Solution Architect, and Senior Full-Stack Developer.
+
+I want you to design and build a premium, modern, scalable digital platform called:
+
+INVESTORS FACTORY
+
+Do NOT treat this as a simple corporate website.
+
+The website is the first version of a much larger ecosystem that connects:
+
+IDEAS + SKILLS + CAPITAL/RESOURCES + COLLABORATION
+
+The long-term goal is to create a trusted platform where people with ideas can find the right people, skills, resources, opportunities, and support required to turn those ideas into real projects.
+
+==================================================
+1. CORE VISION
+==================================================
+
+Build more than a website — build an ecosystem.
+
+The platform should bring together:
+
+1. People with ideas
+2. Skilled professionals
+3. Investors and resource providers
+4. Collaborators
+5. Organisations
+6. Opportunities
+
+The platform should help users move from:
+
+DREAM → IDEA → DISCOVERY → CONNECTION → COLLABORATION → EXECUTION
+
+The website should communicate that Investors Factory is not simply another directory, investment website, job portal, or social network.
+
+It should feel like an ecosystem for turning possibilities into action.
+
+Core message:
+
+"Let's not just dream about change. Let's build the system that makes it possible."
+
+Other important messaging:
+
+"Do you have an idea?"
+"Do you have a skill?"
+"Do you have the capital to invest?"
+"Do you have a big dream you want to achieve?"
+
+"Let's work together. Let's think together."
+
+==================================================
+2. PROBLEM WE ARE SOLVING
+==================================================
+
+Design the product around these real problems:
+
+- Many people have good ideas but lack the right team.
+- Many people have ideas but lack the necessary skills.
+- Many people lack resources or visibility.
+- Skilled people want opportunities but don't know where their skills are needed.
+- People with investment capacity struggle to discover credible early-stage ideas.
+- Potential collaborations are lost because the right people never meet.
+- There is no structured environment connecting these different groups.
+
+Investors Factory should make these connections easier.
+
+The platform should transform disconnected possibilities into structured opportunities.
+
+==================================================
+3. TARGET USERS
+==================================================
+
+Design the platform for multiple user types.
+
+A. IDEATORS
+
+Examples:
+
+- Entrepreneurs
+- Students
+- Creators
+- Innovators
+- Problem-solvers
+- Founders
+- People with business ideas
+- People with social-impact ideas
+
+Their needs:
+
+- Submit ideas
+- Find skilled people
+- Find collaborators
+- Find investors/resources
+- Explain their project
+- Build visibility
+- Receive enquiries
+- Move their project forward
+
+------------------------------------------
+
+B. SKILLED PROFESSIONALS
+
+Examples:
+
+- Developers
+- Designers
+- Marketers
+- Lawyers
+- Finance professionals
+- Managers
+- Consultants
+- Researchers
+- Other specialists
+
+Their needs:
+
+- Showcase skills
+- Build a professional profile
+- Discover projects
+- Find collaboration opportunities
+- Contribute expertise
+- Connect with founders/ideators
+
+------------------------------------------
+
+C. INVESTORS & RESOURCE PROVIDERS
+
+Examples:
+
+- Individual investors
+- Organisations
+- Mentors
+- Advisors
+- Supporters
+- Resource providers
+
+Their needs:
+
+- Discover promising ideas
+- Explore projects
+- Understand project stages
+- Discover people
+- Identify opportunities
+- Contact project owners
+
+IMPORTANT:
+
+Do not make unsupported claims about guaranteed investment returns, funding, or investment outcomes.
+
+------------------------------------------
+
+D. COLLABORATORS
+
+People looking for:
+
+- Partners
+- Teams
+- Projects
+- Meaningful initiatives
+- Professional opportunities
+- Community participation
+
+------------------------------------------
+
+E. ORGANISATIONS
+
+Examples:
+
+- Businesses
+- Institutions
+- Organisations
+
+Their needs:
+
+- Find talent
+- Discover ideas
+- Find partnerships
+- Support projects
+- Collaborate with people
+
+==================================================
+4. BRAND POSITIONING
+==================================================
+
+Position Investors Factory as:
+
+Premium
+Modern
+Human
+Trustworthy
+Ambitious
+Professional
+Inspirational
+Community-driven
+Action-oriented
+
+The brand should communicate:
+
+"Potential becomes possibility when the right people connect."
+
+Avoid making the website look like:
+
+- A generic corporate website
+- A boring investment company
+- A job board
+- A crowded directory
+- A generic social network
+- A template-based startup website
+
+It should feel like a new category of platform.
+
+==================================================
+5. DESIGN DIRECTION
+==================================================
+
+Use a premium visual identity.
+
+Primary visual direction:
+
+DEEP NAVY
++
+WHITE
++
+RESTRAINED GOLD
++
+BLUE ACCENTS
+
+Suggested feeling:
+
+Dark, sophisticated, premium, trustworthy and ambitious.
+
+Use:
+
+- Strong typography
+- Large headlines
+- Generous whitespace
+- Clean layouts
+- Premium cards
+- Subtle borders
+- Soft shadows
+- Elegant animations
+- Clear visual hierarchy
+- High-quality imagery
+- Modern iconography
+- Strong CTA buttons
+
+Avoid:
+
+- Excessive gradients
+- Excessive animations
+- Too many colors
+- Clutter
+- Cheap-looking illustrations
+- Excessive rounded cards
+- Generic SaaS dashboard aesthetics
+
+The presentation specifically recommends deep navy, white and restrained gold/blue accents, strong typography and generous whitespace. :contentReference[oaicite:1]{index=1}
+
+==================================================
+6. BRAND PERSONALITY
+==================================================
+
+The website should sound:
+
+Confident
+Intelligent
+Human
+Ambitious
+Clear
+Inspirational
+Action-oriented
+
+Do NOT use exaggerated startup language.
+
+Avoid phrases such as:
+
+"Revolutionary AI-powered solution"
+"Disrupting everything"
+"10x your success"
+
+unless genuinely supported.
+
+Instead use clear human messaging.
+
+Example:
+
+"Great ideas don't fail because they lack potential. Sometimes they simply lack the right people, skills or resources."
+
+Then:
+
+"Investors Factory brings them together."
+
+==================================================
+7. HOMEPAGE
+==================================================
+
+Create a high-impact homepage.
+
+The homepage should immediately explain:
+
+WHAT IS INVESTORS FACTORY?
+
+WHO IS IT FOR?
+
+WHY DOES IT EXIST?
+
+WHAT CAN USERS DO?
+
+HOW CAN THEY GET INVOLVED?
+
+------------------------------------------
+HERO SECTION
+------------------------------------------
+
+Use a premium full-width hero.
+
+Headline:
+
+"Have an idea? Have a skill? Have capital? Have a dream?"
+
+Alternative headline:
+
+"Where Ideas Meet the People, Skills and Resources to Build Them."
+
+Supporting text:
+
+"Investors Factory is building an ecosystem where ideas, talent, resources and opportunities come together — helping people move from possibility to action."
+
+Primary CTA:
+
+"Explore Ideas"
+
+Secondary CTA:
+
+"Join the Community"
+
+Additional CTA:
+
+"Submit Your Idea"
+
+The hero should visually communicate CONNECTION.
+
+Potential visual concept:
+
+IDEAS
+↓
+SKILLS
+↓
+RESOURCES
+↓
+PEOPLE
+↓
+COLLABORATION
+↓
+EXECUTION
+
+------------------------------------------
+TRUST / VALUE STRIP
+------------------------------------------
+
+Immediately below hero:
+
+"One ecosystem. Multiple possibilities."
+
+Show four pillars:
+
+IDEAS
+SKILLS
+CAPITAL & RESOURCES
+COLLABORATION
+
+------------------------------------------
+HOW IT WORKS
+------------------------------------------
+
+Show:
+
+1. Discover
+2. Understand
+3. Explore
+4. Connect
+5. Contribute
+6. Execute
+
+This six-stage journey is central to the product and should be visually represented as a clean flow.
+
+The original concept explicitly defines this user journey. :contentReference[oaicite:2]{index=2}
+
+------------------------------------------
+FEATURED IDEAS / PROJECTS
+------------------------------------------
+
+Display selected projects.
+
+Each project card should contain:
+
+- Project name
+- Category
+- Short description
+- Current stage
+- Required skills
+- Resource requirements
+- Location if applicable
+- Project owner
+- CTA: "Explore Project"
+
+Possible categories:
+
+Technology
+Education
+Healthcare
+Finance
+Agriculture
+Social Impact
+Sustainability
+Consumer
+Media
+Other
+
+Do not invent actual projects.
+
+Use realistic placeholder/demo content only where necessary.
+
+------------------------------------------
+SKILLS / PEOPLE SECTION
+------------------------------------------
+
+Show examples of people who can contribute:
+
+Developers
+Designers
+Marketers
+Finance
+Legal
+Operations
+Business Strategy
+Sales
+Research
+
+CTA:
+
+"Find Your Contribution"
+
+------------------------------------------
+OPPORTUNITIES SECTION
+------------------------------------------
+
+Show:
+
+Investment opportunities
+Partnership opportunities
+Collaboration opportunities
+Jobs
+Volunteering
+Mentorship
+Other opportunities
+
+------------------------------------------
+SUCCESS / IMPACT SECTION
+------------------------------------------
+
+As real data becomes available, showcase:
+
+Projects launched
+People connected
+Collaborations formed
+Resources provided
+Successful outcomes
+Milestones
+
+IMPORTANT:
+
+Do not fabricate statistics.
+
+If no real statistics exist, use placeholders or omit the statistics.
+
+------------------------------------------
+STORIES / UPDATES
+------------------------------------------
+
+Show:
+
+- Success stories
+- Project updates
+- Announcements
+- Articles
+- Events
+- Community stories
+
+------------------------------------------
+FINAL CTA
+------------------------------------------
+
+End the homepage with a powerful CTA.
+
+Example:
+
+"Your idea is only the beginning."
+
+"Find the people, skills and resources to move it forward."
+
+Buttons:
+
+"Submit an Idea"
+"Join Investors Factory"
+
+==================================================
+8. WEBSITE INFORMATION ARCHITECTURE
+==================================================
+
+Create the following primary navigation:
+
+HOME
+ABOUT / VISION
+IDEAS & PROJECTS
+COLLABORATE
+OPPORTUNITIES
+STORIES / UPDATES
+JOIN
+CONTACT
+
+After login, provide:
+
+DASHBOARD
+PROFILE
+MY PROJECTS
+MY CONNECTIONS
+MY OPPORTUNITIES
+MESSAGES
+NOTIFICATIONS
+SETTINGS
+
+The original website structure includes Home, About/Vision, Ideas & Projects, Join/Profile, Collaborate, Opportunities, Stories/Updates and Contact. :contentReference[oaicite:3]{index=3}
+
+==================================================
+9. ABOUT / VISION PAGE
+==================================================
+
+Create an emotionally strong About page.
+
+Sections:
+
+1. Our Vision
+2. The Problem
+3. Our Core Idea
+4. Who We Serve
+5. How We Work
+6. Long-Term Vision
+7. Our Values
+8. CTA
+
+Explain that:
+
+"The website is the starting point. The larger vision is the system behind it."
+
+Explain the four forces:
+
+IDEAS
+People with ideas, solutions and projects.
+
+SKILLS
+People who can build, design, manage, advise or execute.
+
+CAPITAL & RESOURCES
+People and organisations able to provide funding, resources or support.
+
+COLLABORATION
+A system that connects the right people and turns possibilities into projects.
+
+==================================================
+10. IDEAS & PROJECTS
+==================================================
+
+Create a searchable project marketplace/discovery experience.
+
+Project listing page:
+
+- Search bar
+- Categories
+- Filters
+- Sort
+- Project cards
+- Pagination/infinite scroll
+
+Filters could include:
+
+Category
+Project stage
+Skills required
+Location
+Opportunity type
+Collaboration type
+Resource requirement
+
+Project stages:
+
+Idea
+Concept
+Validation
+Prototype
+MVP
+Early Growth
+Scaling
+
+Project detail page should include:
+
+- Project title
+- Project summary
+- Problem
+- Proposed solution
+- Target users
+- Current stage
+- Project owner
+- Team
+- Required skills
+- Resources needed
+- Collaboration requirements
+- Opportunity type
+- Project updates
+- CTA
+
+Primary CTA:
+
+"Connect With This Project"
+
+Secondary:
+
+"Save Project"
+
+==================================================
+11. SUBMIT AN IDEA
+==================================================
+
+Create a multi-step submission process.
+
+Step 1:
+Basic Information
+
+- Project name
+- Category
+- Short description
+
+Step 2:
+Project Details
+
+- Problem
+- Solution
+- Target users
+- Current stage
+
+Step 3:
+Requirements
+
+- Skills needed
+- Funding/resource requirements
+- Partnership requirements
+- Other requirements
+
+Step 4:
+Team
+
+- Founder/project owner
+- Team members
+- Relevant experience
+
+Step 5:
+Review & Submit
+
+Before publication:
+
+"Your submission may require review before being publicly listed."
+
+This connects to the admin approval workflow.
+
+==================================================
+12. USER REGISTRATION
+==================================================
+
+Create a clean onboarding experience.
+
+Ask the user:
+
+"What brings you to Investors Factory?"
+
+Options:
+
+I have an idea
+I have skills
+I want to invest/support
+I want to collaborate
+I represent an organisation
+I want to explore opportunities
+
+Then create their profile based on their selected role.
+
+Profile fields:
+
+- Name
+- Profile photo
+- Bio
+- Location
+- Skills
+- Interests
+- Experience
+- Areas of contribution
+- Portfolio
+- Linked projects
+- Opportunities
+- Availability
+- Social/professional links
+
+Do not collect unnecessary personal information.
+
+==================================================
+13. COLLABORATE PAGE
+==================================================
+
+Create a dedicated collaboration discovery page.
+
+Users should be able to discover:
+
+- People
+- Teams
+- Projects
+- Skills
+- Opportunities
+
+Example UI:
+
+"Who are you looking for?"
+
+Developer
+Designer
+Marketing
+Finance
+Legal
+Business Partner
+Mentor
+Investor
+Researcher
+Other
+
+Then:
+
+"What do you want to work on?"
+
+Search/filter projects.
+
+CTA:
+
+"Send Collaboration Request"
+
+==================================================
+14. OPPORTUNITIES PAGE
+==================================================
+
+Create an opportunity marketplace.
+
+Opportunity types:
+
+- Investment
+- Partnership
+- Jobs
+- Volunteering
+- Mentorship
+- Resources
+- Collaboration
+- Other
+
+Each opportunity should have:
+
+Title
+Organisation/person
+Description
+Requirements
+Category
+Deadline if applicable
+Location/remote
+Opportunity type
+CTA
+
+==================================================
+15. USER DASHBOARD
+==================================================
+
+After login, create a professional dashboard.
+
+Dashboard should show:
+
+Welcome message
+
+Quick actions:
+
++ Submit Idea
+Explore Projects
+Find People
+Create Opportunity
+
+Overview:
+
+My Projects
+Saved Projects
+Collaboration Requests
+Connections
+Opportunities
+Notifications
+
+Recent activity.
+
+Recommended opportunities/projects can be added later.
+
+==================================================
+16. ADMIN DASHBOARD
+==================================================
+
+Create a secure admin area.
+
+Admin should be able to:
+
+- Manage users
+- Review user profiles
+- Review submitted projects
+- Approve/reject projects
+- Edit projects
+- Manage categories
+- Manage opportunities
+- Manage stories
+- Manage announcements
+- Manage testimonials
+- Manage homepage content
+- Manage users
+- View enquiries
+- View collaboration requests
+- Manage featured projects
+
+Admin content management should not require developers for normal content updates.
+
+==================================================
+17. NOTIFICATIONS
+==================================================
+
+Implement notification architecture.
+
+Notifications for:
+
+- New collaboration request
+- Collaboration request accepted
+- Project approved
+- Project rejected
+- New enquiry
+- Opportunity updates
+- System announcements
+
+Email notifications should also be supported.
+
+==================================================
+18. SEARCH & DISCOVERY
+==================================================
+
+Search should be one of the most important features.
+
+Users should be able to search:
+
+Projects
+People
+Skills
+Opportunities
+Organisations
+
+Provide:
+
+Search
+Categories
+Filters
+Sorting
+Relevant results
+
+Design this experience to scale into intelligent matching in the future.
+
+==================================================
+19. FUTURE MATCHING SYSTEM
+==================================================
+
+Do NOT necessarily implement advanced AI matching in version 1.
+
+However, architect the platform so future matching is possible.
+
+Future concept:
+
+Match:
+
+IDEA ↔ SKILL
+
+IDEA ↔ INVESTOR
+
+IDEA ↔ RESOURCE
+
+PERSON ↔ PROJECT
+
+ORGANISATION ↔ TALENT
+
+PROJECT ↔ PARTNER
+
+PROJECT ↔ OPPORTUNITY
+
+Eventually the system could recommend:
+
+"You may be a good fit for this project."
+
+But this should be presented as a future capability unless implemented.
+
+==================================================
+20. STORIES / UPDATES
+==================================================
+
+Create a content section for:
+
+Articles
+Announcements
+Project updates
+Events
+Success stories
+Community news
+Milestones
+
+Story detail page should include:
+
+Title
+Author
+Date
+Featured image
+Content
+Related projects
+Related stories
+CTA
+
+==================================================
+21. CONTACT
+==================================================
+
+Create a professional contact page.
+
+Categories:
+
+General enquiry
+Partnership
+Investment
+Project enquiry
+Collaboration
+Media
+Other
+
+Include:
+
+Name
+Email
+Subject
+Message
+
+Add appropriate privacy/security handling.
+
+==================================================
+22. MULTILINGUAL SUPPORT
+==================================================
+
+The platform should be architected for:
+
+English
+Telugu
+
+English should be the initial default language.
+
+The architecture should allow additional languages later.
+
+Do not hard-code text directly throughout components.
+
+Use a proper translation/i18n structure.
+
+==================================================
+23. MOBILE-FIRST DESIGN
+==================================================
+
+Design mobile-first.
+
+Important:
+
+Many users may access the platform through smartphones.
+
+Every page must work beautifully on:
+
+Mobile
+Tablet
+Laptop
+Desktop
+
+Pay special attention to:
+
+Navigation
+Forms
+Project cards
+Filters
+Search
+Profile pages
+Dashboards
+CTAs
+Tables
+Admin interfaces
+
+On mobile, use:
+
+Bottom navigation or compact navigation where appropriate.
+
+Do not simply shrink the desktop design.
+
+==================================================
+24. ACCESSIBILITY
+==================================================
+
+Follow modern accessibility principles.
+
+Include:
+
+- Semantic HTML
+- Keyboard navigation
+- Proper labels
+- Focus states
+- Accessible forms
+- Good contrast
+- Alt text
+- Screen-reader-friendly structure
+- Appropriate ARIA only where needed
+
+==================================================
+25. SEO
+==================================================
+
+Build SEO into the architecture.
+
+Every public page should support:
+
+Unique title
+Meta description
+Canonical URL
+Open Graph metadata
+Structured data where appropriate
+Clean URLs
+Semantic HTML
+Sitemap
+Robots configuration
+
+Projects and opportunities should have SEO-friendly URLs.
+
+==================================================
+26. PERFORMANCE
+==================================================
+
+Performance is important.
+
+Implement:
+
+- Image optimization
+- Lazy loading
+- Code splitting
+- Efficient API calls
+- Caching where appropriate
+- Optimized fonts
+- Minimal unnecessary JavaScript
+- Responsive images
+
+Aim for excellent Core Web Vitals.
+
+==================================================
+27. SECURITY
+==================================================
+
+Use secure architecture.
+
+Requirements:
+
+- Secure authentication
+- Password protection
+- Role-based access control
+- Input validation
+- Server-side authorization
+- Secure API design
+- Protection against common web vulnerabilities
+- Rate limiting where appropriate
+- Secure file uploads
+- Data privacy
+- Audit logs for important admin actions
+
+Never trust client-side authorization alone.
+
+==================================================
+28. DATABASE / DATA MODEL
+==================================================
+
+Design a scalable database structure.
+
+Core entities:
+
+User
+Profile
+Role
+Skill
+Interest
+Project
+ProjectCategory
+ProjectStage
+ProjectRequirement
+TeamMember
+Opportunity
+OpportunityCategory
+CollaborationRequest
+Connection
+Notification
+Story
+Comment/Interaction if needed
+Organisation
+Enquiry
+AdminUser
+AnalyticsEvent
+
+Relationships should be designed cleanly.
+
+Avoid creating a database architecture that makes future features difficult.
+
+==================================================
+29. ARCHITECTURE
+==================================================
+
+Use a maintainable architecture with clear separation between:
+
+Frontend
+Backend
+Database
+Authentication
+Content management
+File storage
+Email/notifications
+Analytics
+
+The original product direction explicitly calls for a maintainable architecture, secure authentication, role-based access, CMS/admin controls, database support for users/projects/skills/opportunities/interactions, analytics, SEO, accessibility and future scalability. :contentReference[oaicite:4]{index=4}
+
+Choose technologies based on:
+
+Scalability
+Maintainability
+Security
+Developer experience
+Performance
+Cost
+Future integrations
+
+Do not choose technologies merely because they are fashionable.
+
+==================================================
+30. ANALYTICS
+==================================================
+
+Track meaningful product events.
+
+Examples:
+
+Page views
+Signups
+Project submissions
+Project views
+Searches
+Collaboration requests
+Opportunity views
+Contact enquiries
+CTA clicks
+Conversions
+
+Admin analytics should eventually show:
+
+Traffic
+User growth
+Project submissions
+Engagement
+Conversions
+Popular categories
+Popular skills
+Successful connections
+
+==================================================
+31. TRUST & CREDIBILITY
+==================================================
+
+Trust is extremely important.
+
+Build mechanisms for credibility over time.
+
+Potential features:
+
+Verified profiles
+Verified organisations
+Project status
+Project updates
+Contributor history
+Testimonials
+Success stories
+Milestones
+Moderation
+Reporting
+Community guidelines
+
+Do not fabricate verification badges or testimonials.
+
+==================================================
+32. CONTENT STRATEGY
+==================================================
+
+The website should showcase:
+
+- Story
+- Vision
+- Mission
+- Values
+- Projects
+- Ideas
+- People
+- Skills
+- Partnerships
+- Investment opportunities
+- Success stories
+- Milestones
+- Articles
+- Announcements
+- Events
+- Collaboration calls
+- Testimonials
+
+The goal is to make the platform feel active and trustworthy.
+
+==================================================
+33. DESIGN SYSTEM
+==================================================
+
+Create a reusable design system.
+
+Define:
+
+Colors
+Typography
+Spacing
+Grid
+Buttons
+Inputs
+Cards
+Badges
+Tabs
+Modals
+Dropdowns
+Navigation
+Tables
+Alerts
+Toast notifications
+Empty states
+Loading states
+Error states
+
+Primary brand:
+
+Deep Navy
+White
+Gold accent
+Blue accent
+
+Use the gold accent sparingly for:
+
+Important CTAs
+Highlights
+Key numbers
+Brand moments
+Selected states
+
+==================================================
+34. MICRO-INTERACTIONS
+==================================================
+
+Use subtle premium interactions.
+
+Examples:
+
+Button hover
+Card hover
+Smooth page transitions
+Scroll reveals
+Animated connection lines
+Progress indicators
+Form feedback
+Success animations
+
+Animations should communicate purpose.
+
+Avoid excessive motion.
+
+==================================================
+35. EMPTY STATES
+==================================================
+
+Design meaningful empty states.
+
+Examples:
+
+No projects found:
+
+"Nothing matches your search yet.
+Try changing your filters or explore another category."
+
+No collaboration requests:
+
+"Your network is just getting started."
+
+No saved projects:
+
+"Save projects that interest you and return to them later."
+
+==================================================
+36. ERROR STATES
+==================================================
+
+Create friendly error messages.
+
+Never show technical errors directly to users.
+
+Example:
+
+"Something went wrong.
+Please try again."
+
+==================================================
+37. CORE USER JOURNEY
+==================================================
+
+The main experience should follow:
+
+DISCOVER
+↓
+UNDERSTAND
+↓
+EXPLORE
+↓
+CONNECT
+↓
+CONTRIBUTE
+↓
+EXECUTE
+
+This should influence the entire UX.
+
+Every important page should have ONE clear primary next action.
+
+Examples:
+
+Homepage:
+→ Explore Ideas
+
+Project:
+→ Connect
+
+Profile:
+→ Collaborate
+
+Opportunity:
+→ Apply / Enquire
+
+Submit:
+→ Submit Project
+
+About:
+→ Join
+
+==================================================
+38. CALL-TO-ACTION STRATEGY
+==================================================
+
+Primary CTAs:
+
+Join Investors Factory
+Submit an Idea
+Explore Projects
+Find People
+Collaborate
+Explore Opportunities
+
+Use clear action-oriented language.
+
+Avoid generic:
+
+"Learn More"
+
+where a more meaningful CTA is possible.
+
+==================================================
+39. LONG-TERM ROADMAP
+==================================================
+
+Version 1:
+
+- Public website
+- User registration
+- Profiles
+- Projects
+- Project submission
+- Search/filtering
+- Collaboration requests
+- Opportunities
+- Admin dashboard
+- CMS/content management
+- Notifications
+- Analytics
+- SEO
+- Responsive design
+- English/Telugu architecture
+
+Future:
+
+- Direct messaging
+- Advanced matching
+- AI recommendations
+- Payments
+- Events
+- CRM
+- Community features
+- Advanced analytics
+- Reputation system
+- Verification
+- Organisations
+- Investment workflows
+- Mobile application
+
+The original vision explicitly describes future readiness for messaging, payments, events, CRM, advanced matching and community features. :contentReference[oaicite:5]{index=5}
+
+==================================================
+40. IMPORTANT PRODUCT PRINCIPLES
+==================================================
+
+Principle 1:
+
+START SMALL.
+
+Do not attempt to build every future feature immediately.
+
+Principle 2:
+
+BUILD PROPERLY.
+
+Create a scalable technical foundation.
+
+Principle 3:
+
+LEARN FROM USERS.
+
+Use analytics and feedback to improve the platform.
+
+Principle 4:
+
+SCALE WITH PURPOSE.
+
+Only add complexity when it creates real user value.
+
+Principle 5:
+
+TRUST FIRST.
+
+Do not allow the platform to become a spam-filled directory.
+
+Principle 6:
+
+PEOPLE FIRST.
+
+The platform should feel human, not like a database.
+
+Principle 7:
+
+ACTION OVER TALK.
+
+The ultimate purpose is helping people move from ideas to execution.
+
+==================================================
+41. WHAT I WANT YOU TO PRODUCE
+==================================================
+
+Before writing code, first create:
+
+1. Complete product architecture
+2. Information architecture
+3. Sitemap
+4. User roles and permissions
+5. User journeys
+6. UX flows
+7. Wireframe descriptions
+8. Design system
+9. Page-by-page UI specification
+10. Component architecture
+11. Database schema
+12. API architecture
+13. Authentication architecture
+14. Admin architecture
+15. CMS architecture
+16. SEO strategy
+17. Accessibility strategy
+18. Performance strategy
+19. Security strategy
+20. Analytics/event tracking plan
+21. MVP roadmap
+22. Future roadmap
+
+Then design/build the platform.
+
+==================================================
+42. QUALITY BAR
+==================================================
+
+The final result should look like it was designed by:
+
+A world-class product design team
++
+A senior startup product strategist
++
+A senior full-stack engineering team.
+
+It should feel:
+
+Premium
+Trustworthy
+Modern
+Human
+Ambitious
+Simple
+Scalable
+
+It must NOT feel like a template.
+
+Do not fill the website with unnecessary sections simply to make it look complete.
+
+Every section must have a purpose.
+
+Every page must have a clear user goal.
+
+Every major CTA should move the user toward:
+
+DISCOVER → CONNECT → CONTRIBUTE → EXECUTE
+
+==================================================
+43. FINAL BRAND MESSAGE
+==================================================
+
+The entire product should ultimately communicate:
+
+"Do you have an idea?"
+
+"Do you have a skill?"
+
+"Do you have the capital to invest?"
+
+"Do you have a big dream you want to achieve?"
+
+"Let's work together. Let's think together."
+
+"Let's build a powerful system that turns ideas into reality."
+
+The ultimate message:
+
+"Let's not just dream about change.
+Let's build the system that makes it possible."
+
+==================================================
+FINAL INSTRUCTION
+==================================================
+
+Do not immediately start coding blindly.
+
+First think deeply about the product.
+
+Identify ambiguities and potential product problems.
+
+Then create the complete product blueprint.
+
+After the blueprint is approved, implement the MVP with clean, scalable architecture.
+
+Do not invent business facts, statistics, testimonials, users, investors, projects, partnerships or success stories.
+
+Use realistic placeholder/demo data where necessary and clearly structure it so it can later be replaced with real data.
+
+The final experience should make a first-time visitor immediately understand:
+
+1. What Investors Factory is
+2. Why it exists
+3. Who it is for
+4. What they can do
+5. How they can participate
+6. What action they should take next
+
+Most importantly:
+
+BUILD AN ECOSYSTEM, NOT JUST A WEBSITE.
