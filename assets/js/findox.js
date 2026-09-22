@@ -104,6 +104,19 @@
     });
   }
 
+  // Global WhatsApp Configuration (Can be updated anytime)
+  window.INVESTORS_CLUB_WHATSAPP = ""; // e.g. "919876543210" without '+' or spaces
+
+  // Sync floating whatsapp button with configured number
+  $(document).on("click", ".floating-whatsapp", function (e) {
+    if (window.INVESTORS_CLUB_WHATSAPP) {
+      e.preventDefault();
+      var defaultText = encodeURIComponent("Hi Investors Club, I would like to connect with you!");
+      var targetUrl = "https://api.whatsapp.com/send?phone=" + window.INVESTORS_CLUB_WHATSAPP + "&text=" + defaultText;
+      window.open(targetUrl, "_blank");
+    }
+  });
+
   if ($(".contact-form-validated").length) {
     $(".contact-form-validated").validate({
       // initialize the plugin
@@ -115,25 +128,68 @@
           required: true,
           email: true,
         },
-        message: {
-          required: true,
+        phone: {
+          required: false,
         },
         subject: {
           required: true,
         },
       },
       submitHandler: function (form) {
-        // sending value with ajax request
-        $.post(
-          $(form).attr("action"),
-          $(form).serialize(),
-          function (response) {
-            $(form).parent().find(".result").append(response);
-            $(form).find('input[type="text"]').val("");
-            $(form).find('input[type="email"]').val("");
-            $(form).find("textarea").val("");
-          }
+        var $form = $(form);
+        var name = $form.find('input[name="name"]').val() || "";
+        var phone = $form.find('input[name="phone"]').val() || "";
+        var email = $form.find('input[name="email"]').val() || "";
+        var subject = $form.find('input[name="subject"]').val() || "";
+        var role = $form.find('select[name="role"] option:selected').text() || $form.find('select option:selected').text() || "";
+        var message = $form.find('textarea[name="message"]').val() || "";
+
+        // Build WhatsApp text message
+        var waLines = [
+          "*New Investors Club Inquiry*",
+          "--------------------------------",
+          "*Name:* " + name,
+        ];
+        if (phone) waLines.push("*Phone:* " + phone);
+        if (email) waLines.push("*Email:* " + email);
+        if (role && role !== "I am joining as...") waLines.push("*Role:* " + role);
+        if (subject) waLines.push("*Topic:* " + subject);
+        if (message) waLines.push("*Message:* " + message);
+
+        var waText = encodeURIComponent(waLines.join("\n"));
+        var waPhone = window.INVESTORS_CLUB_WHATSAPP || "";
+        var waUrl = waPhone
+          ? "https://api.whatsapp.com/send?phone=" + waPhone + "&text=" + waText
+          : "https://api.whatsapp.com/send?text=" + waText;
+
+        // Display instant success message
+        var $result = $form.parent().find(".result");
+        $result.html(
+          '<div class="alert alert-success mt-3" style="background:#e8f8f0; color:#006654; border-color:#a3e0c7; border-radius:12px; padding:15px 20px;">' +
+            '<strong>✓ Request Prepared!</strong> Redirecting you to WhatsApp now...' +
+          '</div>'
         );
+
+        // Reset form fields
+        $form.find('input[type="text"]').val("");
+        $form.find('input[type="email"]').val("");
+        $form.find('input[type="tel"]').val("");
+        $form.find("textarea").val("");
+
+        // Also post to backend if action exists
+        var formAction = $form.attr("action");
+        if (formAction) {
+          $.post(formAction, $form.serialize()).always(function () {
+            setTimeout(function () {
+              window.open(waUrl, "_blank");
+            }, 800);
+          });
+        } else {
+          setTimeout(function () {
+            window.open(waUrl, "_blank");
+          }, 800);
+        }
+
         return false;
       },
     });
