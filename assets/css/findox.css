@@ -17380,6 +17380,58 @@ body.boxed-wrapper .hero-one__shape-1 {
   }
 }
 
+/* Static non-clickable social icons */
+.social-links .social-links--static,
+.social-links span.social-links--static,
+a.social-links--static {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--findox-white, #ffffff);
+  overflow: hidden;
+  pointer-events: none !important;
+  cursor: default !important;
+  opacity: 0.65;
+  user-select: none;
+}
+.topbar .social-links span.social-links--static,
+.topbar .social-links .social-links--static {
+  width: 28px;
+  height: 28px;
+  border-color: var(--findox-gray, #92918f);
+}
+.mobile-nav__content .social-links span.social-links--static,
+.mobile-nav__content .social-links .social-links--static {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: var(--findox-base, #006654);
+}
+.team-card__social .social-links span.social-links--static,
+.team-card__social .social-links .social-links--static {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background-color: var(--findox-white, #ffffff);
+}
+.social-links .social-links--static:hover,
+.social-links span.social-links--static:hover,
+a.social-links--static:hover {
+  background-color: transparent !important;
+  border-color: inherit !important;
+}
+.social-links .social-links--static:hover .social-links__icon,
+.social-links span.social-links--static:hover .social-links__icon,
+a.social-links--static:hover .social-links__icon {
+  color: inherit !important;
+  animation: none !important;
+  transform: none !important;
+}
+
 /*# sourceMappingURL=findox.css.map */
 
 
