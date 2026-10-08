@@ -104,8 +104,9 @@
     });
   }
 
-  // Global WhatsApp Configuration (Can be updated anytime)
-  window.INVESTORS_CLUB_WHATSAPP = ""; // e.g. "919876543210" without '+' or spaces
+  // Global WhatsApp and Email Configuration
+  window.INVESTORS_CLUB_WHATSAPP = "919347056493"; // e.g. "919876543210" without '+' or spaces
+  window.INVESTORS_CLUB_EMAIL = "investorclubofficial@gmail.com"; // Target recipient Gmail / Email
 
   // Sync floating whatsapp button with configured number
   $(document).on("click", ".floating-whatsapp", function (e) {

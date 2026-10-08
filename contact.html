@@ -32,6 +32,7 @@
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/findox.css" />
+    <link rel="stylesheet" href="assets/css/multistep-form.css" />
 </head>
 
 <body class="custom-cursor">
@@ -51,7 +52,7 @@
                         <ul class="topbar__info list-unstyled">
                             <li>
                                 <span class="topbar__info__icon"><i class="icon-email"></i></span>
-                                <span><a href="mailto:connect@investorsfactory.com">connect@investorsfactory.com</a></span>
+                                <span><a href="mailto:investorclubofficial@gmail.com">investorclubofficial@gmail.com</a></span>
                             </li>
                             <li>
                                 <span class="topbar__info__icon"><i class="icon-location"></i></span>
@@ -132,7 +133,7 @@
                                 <span class="sr-only">Search</span>
                             </a><!-- /.main-header__search -->
                             <a href="contact.html" class="main-header__btn findox-btn">
-                                <span class="findox-btn__text">Join Ecosystem</span>
+                                <span class="findox-btn__text">Join Investor Factory</span>
                                 <span class="findox-btn__icon-box"><span class="findox-btn__icon"><i class="icon-arrow-right-up"></i><i class="icon-arrow-right-up"></i></span></span>
                             </a><!-- /.main-header__btn -->
                         </div><!-- /.main-header__right -->
@@ -184,7 +185,7 @@
                                         <span class="contact-one__info__icon"><i class="icon-phone-call"></i></span>
                                         <div class="contact-one__info__content">
                                             <h4 class="contact-one__info__title">Direct Inquiries</h4>
-                                            <a href="tel:+11234751328" class="contact-one__info__text">+11234 751 328</a>
+                                            <a href="tel:+919347056493" class="contact-one__info__text">+91 93470 56493</a>
                                         </div>
                                     </div><!-- /.contact-one__info__inner -->
                                 </li>
@@ -193,7 +194,7 @@
                                         <span class="contact-one__info__icon"><i class="icon-mail"></i></span>
                                         <div class="contact-one__info__content">
                                             <h4 class="contact-one__info__title">Send Us Email</h4>
-                                            <a href="mailto:connect@investorsfactory.com" class="contact-one__info__text">connect@investorsfactory.com</a>
+                                            <a href="mailto:investorclubofficial@gmail.com" class="contact-one__info__text">investorclubofficial@gmail.com</a>
                                         </div>
                                     </div><!-- /.contact-one__info__inner -->
                                 </li>
@@ -210,39 +211,304 @@
                         </div><!-- /.contact-one__content -->
                     </div><!-- /.col-xl-5 -->
                     <div class="col-xl-7 col-lg-6" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1300">
-                        <div class="contact-one__form">
-                            <form action="assets/inc/sendemail.php" class="contact-form-validated form-one">
-                                <div class="form-one__group">
-                                    <div class="form-one__control form-one__control--full">
-                                        <input type="text" name="name" placeholder="Your Name *">
-                                    </div><!-- /.form-one__control -->
-                                    <div class="form-one__control">
-                                        <input type="tel" name="phone" placeholder="Your Phone *">
-                                    </div><!-- /.form-one__control -->
-                                    <div class="form-one__control">
-                                        <input type="email" name="email" placeholder="Your Email *">
-                                    </div><!-- /.form-one__control -->
-                                    <div class="form-one__control form-one__control--full">
-                                        <input type="text" name="subject" placeholder="Project or Collaboration Topic *">
-                                    </div><!-- /.form-one__control -->
-                                    <div class="form-one__control form-one__control--full">
-                                        <select class="selectpicker" aria-label="Role or Interest">
-                                            <option selected>I am joining as...</option>
-                                            <option value="1">Ideator / Founder with an Idea</option>
-                                            <option value="2">Skilled Professional / Contributor</option>
-                                            <option value="3">Investor / Resource Provider</option>
-                                            <option value="4">Organization / Partner</option>
-                                        </select>
-                                    </div><!-- /.form-one__control -->
-                                    <div class="form-one__control form-one__control--full">
-                                        <button type="submit" class="findox-btn findox-btn--base">
-                                            <span class="findox-btn__text">SEND REQUEST</span>
+                        <div class="contact-one__form contact-multistep-container">
+                            <!-- Multi-step Progress Tracker -->
+                            <div class="step-progress-wrapper mb-4">
+                                <div class="step-progress-bar">
+                                    <div class="step-progress-fill" id="stepProgressFill" style="width: 25%;"></div>
+                                </div>
+                                <div class="step-progress-indicators d-flex justify-content-between mt-3">
+                                    <div class="step-indicator active" data-step="1">
+                                        <div class="step-indicator__circle">1</div>
+                                        <div class="step-indicator__label">Contact</div>
+                                    </div>
+                                    <div class="step-indicator" data-step="2">
+                                        <div class="step-indicator__circle">2</div>
+                                        <div class="step-indicator__label">Background</div>
+                                    </div>
+                                    <div class="step-indicator" data-step="3">
+                                        <div class="step-indicator__circle">3</div>
+                                        <div class="step-indicator__label">Investment</div>
+                                    </div>
+                                    <div class="step-indicator" data-step="4">
+                                        <div class="step-indicator__circle">4</div>
+                                        <div class="step-indicator__label">Proposal</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <form action="assets/inc/sendemail.php" method="POST" enctype="multipart/form-data" class="contact-form-validated form-one" id="multiStepContactForm">
+                                
+                                <!-- Page 1: Personal Details (Section 1: Contact Information) -->
+                                <div class="form-step-card active" id="formCard1">
+                                    <div class="step-card__header mb-4">
+                                        <div class="step-card__badge"><i class="fas fa-address-card"></i> Section 1: Contact Information</div>
+                                        <h3 class="step-card__title">Personal Details</h3>
+                                        <p class="step-card__subtitle">Please provide your primary contact details so our team can connect with you.</p>
+                                    </div>
+                                    <div class="form-one__group">
+                                        <div class="form-one__control form-one__control--full">
+                                            <label class="form-label-custom">Full Name <span class="text-danger">*</span></label>
+                                            <div class="input-with-icon">
+                                                <i class="far fa-user input-icon"></i>
+                                                <input type="text" name="name" id="userName" placeholder="Enter your full name" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-one__control">
+                                            <label class="form-label-custom">Email Address <span class="text-danger">*</span></label>
+                                            <div class="input-with-icon">
+                                                <i class="far fa-envelope input-icon"></i>
+                                                <input type="email" name="email" id="userEmail" placeholder="e.g. name@example.com" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-one__control">
+                                            <label class="form-label-custom">Phone / WhatsApp Number <span class="text-danger">*</span></label>
+                                            <div class="input-with-icon">
+                                                <i class="fab fa-whatsapp input-icon"></i>
+                                                <input type="tel" name="phone" id="userPhone" placeholder="e.g. +91 98765 43210" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="step-actions mt-4 d-flex justify-content-end">
+                                        <button type="button" class="findox-btn findox-btn--base btn-next-step" data-next="2">
+                                            <span class="findox-btn__text">Next: Profile & Background</span>
                                             <span class="findox-btn__icon"><i class="icon-arrow-right-2"></i><i class="icon-arrow-right-2"></i></span>
-                                        </button><!-- /.findox-btn -->
-                                    </div><!-- /.form-one__control -->
-                                </div><!-- /.form-one__group -->
-                            </form><!-- /.form-one -->
-                            <div class="result"></div><!-- /.result -->
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Page 2: Profile & Background (Section 2: Background & Demographics) -->
+                                <div class="form-step-card" id="formCard2">
+                                    <div class="step-card__header mb-4">
+                                        <div class="step-card__badge"><i class="fas fa-user-graduate"></i> Section 2: Background & Demographics</div>
+                                        <h3 class="step-card__title">Profile & Background</h3>
+                                        <p class="step-card__subtitle">Share your demographic details and academic background.</p>
+                                    </div>
+                                    <div class="form-one__group">
+                                        <div class="form-one__control form-one__control--full">
+                                            <label class="form-label-custom">Age <span class="text-danger">*</span></label>
+                                            <div class="input-with-icon">
+                                                <i class="fas fa-calendar-alt input-icon"></i>
+                                                <input type="number" name="age" id="userAge" min="18" max="100" step="1" placeholder="Enter your age (whole number, e.g. 28)" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-one__control form-one__control--full">
+                                            <label class="form-label-custom">Highest Educational Qualification <span class="text-danger">*</span></label>
+                                            <div class="custom-select-wrapper">
+                                                <select class="custom-form-select" name="highest_qualification" id="userQualification" required>
+                                                    <option value="" disabled selected>Select highest educational qualification</option>
+                                                    <option value="High School / Diploma">High School / Diploma</option>
+                                                    <option value="Bachelor's Degree">Bachelor’s Degree</option>
+                                                    <option value="Master's Degree / Post Graduation">Master’s Degree / Post Graduation</option>
+                                                    <option value="Professional Certification (CA, CMA, CS, etc.)">Professional Certification (CA, CMA, CS, etc.)</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-one__control form-one__control--full d-none" id="otherQualificationWrapper">
+                                            <label class="form-label-custom">Please specify your qualification <span class="text-danger">*</span></label>
+                                            <div class="input-with-icon">
+                                                <i class="fas fa-edit input-icon"></i>
+                                                <input type="text" name="other_qualification" id="userOtherQualification" placeholder="Enter your qualification">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="step-actions mt-4 d-flex justify-content-between align-items-center">
+                                        <button type="button" class="btn-prev-step" data-prev="1">
+                                            <i class="fas fa-arrow-left me-2"></i> Back
+                                        </button>
+                                        <button type="button" class="findox-btn findox-btn--base btn-next-step" data-next="3">
+                                            <span class="findox-btn__text">Next: Investment Profile</span>
+                                            <span class="findox-btn__icon"><i class="icon-arrow-right-2"></i><i class="icon-arrow-right-2"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Page 3: Collaboration & Investment Profile (Section 3: Investment & Value Contribution) -->
+                                <div class="form-step-card" id="formCard3">
+                                    <div class="step-card__header mb-4">
+                                        <div class="step-card__badge"><i class="fas fa-hand-holding-usd"></i> Section 3: Investment & Value Contribution</div>
+                                        <h3 class="step-card__title">Collaboration & Investment Profile</h3>
+                                        <p class="step-card__subtitle">Define how you aim to contribute, engagement style, and financial scope.</p>
+                                    </div>
+                                    
+                                    <!-- Checkboxes: Contribution Modes -->
+                                    <div class="form-group-block mb-4">
+                                        <label class="form-label-custom mb-2">How do you plan to invest / contribute? <span class="text-danger">*</span> <small class="text-muted font-weight-normal">(Select all that apply)</small></label>
+                                        <div class="checkbox-options-grid" id="contributionCheckboxGroup">
+                                            <label class="custom-checkbox-card">
+                                                <input type="checkbox" name="contribution_modes[]" value="Financial Capital (Money)">
+                                                <span class="checkbox-indicator"></span>
+                                                <span class="checkbox-label-text">
+                                                    <strong>Financial Capital (Money)</strong>
+                                                    <small class="text-muted d-block">Deploy funds into high-potential ventures</small>
+                                                </span>
+                                            </label>
+                                            <label class="custom-checkbox-card">
+                                                <input type="checkbox" name="contribution_modes[]" value="Technical / Professional Skill">
+                                                <span class="checkbox-indicator"></span>
+                                                <span class="checkbox-label-text">
+                                                    <strong>Technical / Professional Skill</strong>
+                                                    <small class="text-muted d-block">Engineering, architecture, tech leadership</small>
+                                                </span>
+                                            </label>
+                                            <label class="custom-checkbox-card">
+                                                <input type="checkbox" name="contribution_modes[]" value="Strategic Ideology / Domain Knowledge">
+                                                <span class="checkbox-indicator"></span>
+                                                <span class="checkbox-label-text">
+                                                    <strong>Strategic Ideology / Domain Knowledge</strong>
+                                                    <small class="text-muted d-block">Industry expertise, strategy, advisory</small>
+                                                </span>
+                                            </label>
+                                            <label class="custom-checkbox-card">
+                                                <input type="checkbox" name="contribution_modes[]" value="Time & Operational Involvement">
+                                                <span class="checkbox-indicator"></span>
+                                                <span class="checkbox-label-text">
+                                                    <strong>Time & Operational Involvement</strong>
+                                                    <small class="text-muted d-block">Hands-on day-to-day operations & execution</small>
+                                                </span>
+                                            </label>
+                                            <label class="custom-checkbox-card">
+                                                <input type="checkbox" name="contribution_modes[]" value="Other" id="checkContributionOther">
+                                                <span class="checkbox-indicator"></span>
+                                                <span class="checkbox-label-text">
+                                                    <strong>Other Contribution</strong>
+                                                    <small class="text-muted d-block">Custom resources or partnership models</small>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="mt-2 d-none" id="contributionOtherInputWrapper">
+                                            <input type="text" name="contribution_other_text" id="contributionOtherText" class="form-control-custom" placeholder="Specify other way you plan to contribute">
+                                        </div>
+                                    </div>
+
+                                    <!-- Radio: Preferred Engagement Mode -->
+                                    <div class="form-group-block mb-4">
+                                        <label class="form-label-custom mb-2">Preferred Engagement Mode <span class="text-danger">*</span></label>
+                                        <div class="radio-pills-grid" id="engagementModeGroup">
+                                            <label class="custom-radio-card">
+                                                <input type="radio" name="engagement_mode" value="Full-Time" required>
+                                                <span class="radio-card-content">
+                                                    <i class="fas fa-briefcase radio-icon"></i>
+                                                    <span class="radio-title">Full-Time</span>
+                                                </span>
+                                            </label>
+                                            <label class="custom-radio-card">
+                                                <input type="radio" name="engagement_mode" value="Part-Time">
+                                                <span class="radio-card-content">
+                                                    <i class="fas fa-clock radio-icon"></i>
+                                                    <span class="radio-title">Part-Time</span>
+                                                </span>
+                                            </label>
+                                            <label class="custom-radio-card">
+                                                <input type="radio" name="engagement_mode" value="Strategic Advisory / Silent Partner">
+                                                <span class="radio-card-content">
+                                                    <i class="fas fa-chess-knight radio-icon"></i>
+                                                    <span class="radio-title">Strategic Advisory / Silent Partner</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Paragraph: Prior Business & Management Experience -->
+                                    <div class="form-one__group mb-4">
+                                        <div class="form-one__control form-one__control--full">
+                                            <label class="form-label-custom">Prior Business & Management Experience <span class="text-danger">*</span></label>
+                                            <p class="form-field-prompt">Briefly describe any past or current businesses, projects, or professional leadership roles.</p>
+                                            <div class="textarea-wrapper">
+                                                <textarea name="prior_experience" id="userPriorExperience" rows="3" placeholder="Share your entrepreneurial ventures, key achievements, or team leadership history..." required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Radio / Select: Investment Capability / Range -->
+                                    <div class="form-group-block">
+                                        <label class="form-label-custom mb-2">Investment Capability / Range <span class="text-danger">*</span></label>
+                                        <div class="investment-tier-grid" id="investmentRangeGroup">
+                                            <label class="investment-tier-item">
+                                                <input type="radio" name="investment_range" value="Under ₹5 Lakhs" required>
+                                                <span class="tier-box">Under ₹5 Lakhs</span>
+                                            </label>
+                                            <label class="investment-tier-item">
+                                                <input type="radio" name="investment_range" value="₹5 Lakhs – ₹15 Lakhs">
+                                                <span class="tier-box">₹5 Lakhs – ₹15 Lakhs</span>
+                                            </label>
+                                            <label class="investment-tier-item">
+                                                <input type="radio" name="investment_range" value="₹15 Lakhs – ₹50 Lakhs">
+                                                <span class="tier-box">₹15 Lakhs – ₹50 Lakhs</span>
+                                            </label>
+                                            <label class="investment-tier-item">
+                                                <input type="radio" name="investment_range" value="₹50 Lakhs – ₹1 Crore">
+                                                <span class="tier-box">₹50 Lakhs – ₹1 Crore</span>
+                                            </label>
+                                            <label class="investment-tier-item">
+                                                <input type="radio" name="investment_range" value="₹1 Crore+">
+                                                <span class="tier-box">₹1 Crore+</span>
+                                            </label>
+                                            <label class="investment-tier-item">
+                                                <input type="radio" name="investment_range" value="Skill / Sweat Equity Only">
+                                                <span class="tier-box">Skill / Sweat Equity Only</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-actions mt-4 d-flex justify-content-between align-items-center">
+                                        <button type="button" class="btn-prev-step" data-prev="2">
+                                            <i class="fas fa-arrow-left me-2"></i> Back
+                                        </button>
+                                        <button type="button" class="findox-btn findox-btn--base btn-next-step" data-next="4">
+                                            <span class="findox-btn__text">Next: Business Proposal</span>
+                                            <span class="findox-btn__icon"><i class="icon-arrow-right-2"></i><i class="icon-arrow-right-2"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Page 4: Business Proposal & Ideas (Section 4: Business Concepts & Proposals) -->
+                                <div class="form-step-card" id="formCard4">
+                                    <div class="step-card__header mb-4">
+                                        <div class="step-card__badge"><i class="fas fa-lightbulb"></i> Section 4: Business Concepts & Proposals</div>
+                                        <h3 class="step-card__title">Business Proposal & Ideas</h3>
+                                        <p class="step-card__subtitle">Present your concept or upload supporting decks and plans for our committee.</p>
+                                    </div>
+                                    <div class="form-one__group">
+                                        <div class="form-one__control form-one__control--full">
+                                            <label class="form-label-custom">Business Idea Overview / Concept Description <small class="text-muted font-weight-normal">(Optional)</small></label>
+                                            <p class="form-field-prompt">Outline your business concept, target market, or the problem it solves.</p>
+                                            <div class="textarea-wrapper">
+                                                <textarea name="business_idea_description" id="ideaDesc" rows="4" placeholder="Describe the market opportunity, solution, customer profile, and current execution status..."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-one__control form-one__control--full">
+                                            <label class="form-label-custom">Attach Pitch Deck, Business Plan, or Resume (PPT / PDF) <small class="text-muted font-weight-normal">(Optional)</small></label>
+                                            <div class="file-upload-box" id="fileUploadContainer">
+                                                <input type="file" name="proposal_file" id="proposalFileInput" accept=".pdf,.ppt,.pptx,application/pdf,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation" class="d-none">
+                                                <div class="file-upload-content text-center" id="fileDropZone">
+                                                    <div class="file-upload-icon mb-2">
+                                                        <i class="fas fa-cloud-upload-alt fa-2x"></i>
+                                                    </div>
+                                                    <p class="file-upload-prompt mb-1 font-weight-bold">Click to browse or drag & drop files</p>
+                                                    <p class="file-upload-hints text-muted small mb-0">Allowed types: PDF, Presentation (PPT / PPTX) • Up to 25 MB</p>
+                                                    <div class="file-selected-badge mt-2 d-none" id="fileSelectedBadge">
+                                                        <i class="fas fa-file-alt text-success me-2"></i><span id="fileNameDisplay">file.pdf</span>
+                                                        <button type="button" class="btn-remove-file ms-2" id="btnRemoveFile" title="Remove file">&times;</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="step-actions mt-4 d-flex justify-content-between align-items-center">
+                                        <button type="button" class="btn-prev-step" data-prev="3">
+                                            <i class="fas fa-arrow-left me-2"></i> Back
+                                        </button>
+                                        <button type="submit" class="findox-btn findox-btn--base" id="submitMultiStepForm">
+                                            <span class="findox-btn__text">SUBMIT PROPOSAL</span>
+                                            <span class="findox-btn__icon"><i class="icon-arrow-right-2"></i><i class="icon-arrow-right-2"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </form>
+                            <div class="result mt-3"></div>
                         </div><!-- /.contact-one__form -->
                     </div><!-- /.col-xl-7 -->
                 </div><!-- /.row -->
@@ -250,11 +516,11 @@
             <img src="assets/images/resources/contact-1-1.png" alt="contact" class="contact-one__image">
         </section><!-- /.contact-one -->
 
-        <section class="google-map google-map__contact">
-            <iframe title="template google map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd" class="map__contact" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section><!-- /.google-map -->
+        <!-- Section Separator to prevent contact content from merging with footer -->
+        <div class="contact-footer-spacer"></div>
 
-        <footer class="main-footer main-footer--two">
+        <footer class="main-footer">
+            <div class="main-footer__bg" style="background-image: url(assets/images/backgrounds/footer-bg.jpg);"></div>
             <div class="main-footer__top">
                 <div class="container">
                     <div class="row gutter-y-40">
@@ -349,11 +615,11 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <span class="mobile-nav__contact__icon"><i class="fa fa-envelope"></i></span>
-                    <a href="mailto:connect@investorsfactory.com">connect@investorsfactory.com</a>
+                    <a href="mailto:investorclubofficial@gmail.com">investorclubofficial@gmail.com</a>
                 </li>
                 <li>
                     <span class="mobile-nav__contact__icon"><i class="fa fa-phone-alt"></i></span>
-                    <a href="tel:+9156980036420">+91 5698 0036 420</a>
+                    <a href="tel:+919347056493">+91 93470 56493</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="social-links">
@@ -437,6 +703,7 @@
 
     <!-- template js -->
     <script src="assets/js/findox.js"></script>
+    <script src="assets/js/multistep-form.js"></script>
 </body>
 
 </html>
