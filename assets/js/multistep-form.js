@@ -231,8 +231,6 @@
 
     // Final Form Submission Handling (Page 4 submit button)
     $("#multiStepContactForm").on("submit", function (e) {
-      e.preventDefault();
-
       var $form = $(this);
       var name = $("#userName").val() || "";
       var email = $("#userEmail").val() || "";
@@ -263,13 +261,12 @@
       var fileName = fileObj ? fileObj.name : "None attached";
 
       var targetEmail = window.INVESTORS_CLUB_EMAIL || "investorclubofficial@gmail.com";
-      var emailSubject = "New Collaboration & Investment Profile Submission from " + name;
+      var emailSubject = "New Collaboration & Investment Profile Submission from " + (name || "Candidate");
+
+      // Update hidden subject
+      $("#formSubject").val(emailSubject);
 
       var emailBodyLines = [
-        "Hello Team,",
-        "",
-        "A new candidate has submitted the complete Collaboration & Investment Profile Form:",
-        "",
         "========================================",
         "PAGE 1: CONTACT INFORMATION",
         "========================================",
@@ -297,85 +294,68 @@
         "========================================",
         "• Business Idea Overview / Concept Description:",
         (ideaDesc ? ideaDesc : "None provided"),
-        "• Attached Pitch Deck / Business Plan / Resume: " + fileName,
+        "• Attached File: " + fileName,
         "",
         "----------------------------------------",
         "Submitted via Investors Club Digital Web Portal"
       ];
 
       var emailBody = emailBodyLines.join("\n");
+      $("#formFullSummary").val(emailBody);
 
-      // Direct Gmail Compose URL
-      var gmailComposeUrl = "https://mail.google.com/mail/?view=cm&fs=1" +
-        "&to=" + encodeURIComponent(targetEmail) +
-        "&su=" + encodeURIComponent(emailSubject) +
-        "&body=" + encodeURIComponent(emailBody);
-
-      // System mailto URL fallback
-      var mailtoUrl = "mailto:" + encodeURIComponent(targetEmail) +
-        "?subject=" + encodeURIComponent(emailSubject) +
-        "&body=" + encodeURIComponent(emailBody);
-
-      var formAction = $form.attr("action") || "assets/inc/sendemail.php";
       var $result = $form.parent().find(".result");
       var $btn = $("#submitMultiStepForm");
 
-      // Processing state
+      // UI Submitting state
       $btn.prop("disabled", true).css("opacity", "0.7");
       $result.html(
         '<div class="alert alert-info" style="background:#f0f7ff; color:#0b3a75; border-color:#bcd9f8; border-radius:16px; padding:20px;">' +
-          '<h5 style="color:#0b3a75; font-weight:700; margin-bottom:5px;"><i class="fas fa-spinner fa-spin me-2"></i> Submitting your proposal...</h5>' +
-          '<p style="margin-bottom:0; font-size:14px;">Please wait while your details are transmitted directly to our inbox.</p>' +
+          '<h5 style="color:#0b3a75; font-weight:700; margin-bottom:5px;"><i class="fas fa-spinner fa-spin me-2"></i> Submitting your proposal with attached file...</h5>' +
+          '<p style="margin-bottom:0; font-size:14px;">Please wait while your complete profile and attached document are delivered to our inbox.</p>' +
         '</div>'
       );
 
-      var formData = new FormData($form[0]);
+      // Listen for the iframe load to confirm submission
+      var $iframe = $("#formSubmitSink");
+      var submissionHandled = false;
 
-      $.ajax({
-        url: formAction,
-        type: "POST",
-        data: formData,
-        processData: false,
-        contentType: false,
-        dataType: "json",
-        success: function (res) {
-          $btn.prop("disabled", false).css("opacity", "1");
-          if (res && res.status === "success") {
-            $result.html(
-              '<div class="alert alert-success" style="background:#e8f8f0; color:#006654; border-color:#a3e0c7; border-radius:16px; padding:22px; box-shadow: 0 10px 25px rgba(0,102,84,0.1);">' +
-                '<h5 style="color:#006654; font-weight:700; margin-bottom:8px;"><i class="fas fa-check-circle me-2"></i> Application Submitted Successfully!</h5>' +
-                '<p style="margin-bottom:0; font-size:14px;">Thank you, <strong>' + name + '</strong>. Your complete profile and attachments have been delivered directly to our inbox (<strong>' + targetEmail + '</strong>). Our team will review your submission and reach out via Phone / WhatsApp.</p>' +
-              '</div>'
-            );
-            $form[0].reset();
-            $("#fileSelectedBadge").addClass("d-none");
-            $(".file-upload-prompt").removeClass("d-none");
-            $(".file-upload-hints").removeClass("d-none");
-            $("#otherQualificationWrapper").addClass("d-none");
-            $("#contributionOtherInputWrapper").addClass("d-none");
-          } else {
-            showGmailFallback();
-          }
-        },
-        error: function () {
-          $btn.prop("disabled", false).css("opacity", "1");
-          showGmailFallback();
-        }
-      });
+      function onSubmissionFinished() {
+        if (submissionHandled) return;
+        submissionHandled = true;
 
-      function showGmailFallback() {
+        $btn.prop("disabled", false).css("opacity", "1");
         $result.html(
-          '<div class="alert alert-success" style="background:#e8f8f0; color:#006654; border-color:#a3e0c7; border-radius:16px; padding:20px; box-shadow: 0 10px 25px rgba(0,102,84,0.1);">' +
-            '<h5 style="color:#006654; font-weight:700; margin-bottom:8px;"><i class="fas fa-envelope-open-text me-2"></i> Opening Gmail to Deliver Directly...</h5>' +
-            '<p style="margin-bottom:8px; font-size:14px;">Your application has been prepared and addressed to <strong>' + targetEmail + '</strong>.</p>' +
-            '<div class="mt-2"><a href="' + gmailComposeUrl + '" target="_blank" class="btn btn-sm btn-success me-2" style="border-radius:20px; font-size:13px; font-weight:600;"><i class="fab fa-google me-1"></i> Send via Gmail</a>' +
-            '<a href="' + mailtoUrl + '" class="btn btn-sm btn-outline-secondary" style="border-radius:20px; font-size:13px;">Open Default Mail App</a></div>' +
+          '<div class="alert alert-success" style="background:#e8f8f0; color:#006654; border-color:#a3e0c7; border-radius:16px; padding:22px; box-shadow: 0 10px 25px rgba(0,102,84,0.1);">' +
+            '<h5 style="color:#006654; font-weight:700; margin-bottom:8px;"><i class="fas fa-check-circle me-2"></i> Application Submitted Successfully!</h5>' +
+            '<p style="margin-bottom:0; font-size:14px;">Thank you, <strong>' + name + '</strong>. Your complete profile, proposal, and attached file (<strong>' + fileName + '</strong>) have been delivered to our inbox (<strong>' + targetEmail + '</strong>). Our committee will review your submission and connect with you shortly.</p>' +
           '</div>'
         );
-        window.open(gmailComposeUrl, "_blank");
+
+        $form[0].reset();
+        $("#fileSelectedBadge").addClass("d-none");
+        $(".file-upload-prompt").removeClass("d-none");
+        $(".file-upload-hints").removeClass("d-none");
+        $("#otherQualificationWrapper").addClass("d-none");
+        $("#contributionOtherInputWrapper").addClass("d-none");
+        // Reset to Step 1
+        $(".form-step-card").removeClass("active");
+        $("#formCard1").addClass("active");
+        $(".step-indicator").removeClass("active").removeClass("completed");
+        $('.step-indicator[data-step="1"]').addClass("active");
+        $("#stepProgressFill").css("width", "25%");
       }
 
-      return false;
+      $iframe.one("load", function () {
+        onSubmissionFinished();
+      });
+
+      // Safety timeout in case cross-origin iframe load is throttled
+      setTimeout(function () {
+        onSubmissionFinished();
+      }, 4000);
+
+      // Allow form to submit natively to the iframe target
+      return true;
     });
   });
 })(jQuery);

@@ -118,8 +118,8 @@
     }
   });
 
-  if ($(".contact-form-validated").length) {
-    $(".contact-form-validated").validate({
+  if ($(".contact-form-validated:not(#multiStepContactForm)").length) {
+    $(".contact-form-validated:not(#multiStepContactForm)").validate({
       // initialize the plugin
       rules: {
         name: {

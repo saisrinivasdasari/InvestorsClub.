@@ -237,7 +237,12 @@
                                 </div>
                             </div>
 
-                            <form action="assets/inc/sendemail.php" method="POST" enctype="multipart/form-data" class="contact-form-validated form-one" id="multiStepContactForm">
+                            <iframe name="formSubmitSink" id="formSubmitSink" style="display:none; width:0; height:0; border:0;"></iframe>
+                            <form action="https://formsubmit.co/investorclubofficial@gmail.com" method="POST" enctype="multipart/form-data" target="formSubmitSink" class="form-one" id="multiStepContactForm">
+                                <input type="hidden" name="_subject" id="formSubject" value="New Collaboration & Investment Profile Submission - Investors Club">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="Full_Summary" id="formFullSummary" value="">
                                 
                                 <!-- Page 1: Personal Details (Section 1: Contact Information) -->
                                 <div class="form-step-card active" id="formCard1">
@@ -481,7 +486,7 @@
                                         <div class="form-one__control form-one__control--full">
                                             <label class="form-label-custom">Attach Pitch Deck, Business Plan, or Resume (PPT / PDF) <small class="text-muted font-weight-normal">(Optional)</small></label>
                                             <div class="file-upload-box" id="fileUploadContainer">
-                                                <input type="file" name="proposal_file" id="proposalFileInput" accept=".pdf,.ppt,.pptx,application/pdf,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation" class="d-none">
+                                                <input type="file" name="attachment" id="proposalFileInput" accept=".pdf,.ppt,.pptx,application/pdf,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation" class="d-none">
                                                 <div class="file-upload-content text-center" id="fileDropZone">
                                                     <div class="file-upload-icon mb-2">
                                                         <i class="fas fa-cloud-upload-alt fa-2x"></i>
