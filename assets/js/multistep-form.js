@@ -260,7 +260,7 @@
       var fileObj = $fileInput[0].files[0];
       var fileName = fileObj ? fileObj.name : "None attached";
 
-      var targetEmail = window.INVESTORS_CLUB_EMAIL || "investorclubofficial@gmail.com";
+      var targetEmail = window.INVESTORS_CLUB_EMAIL || "saisrinivasdasari2003@gmail.com";
       var emailSubject = "New Collaboration & Investment Profile Submission from " + (name || "Candidate");
 
       // Update hidden subject
