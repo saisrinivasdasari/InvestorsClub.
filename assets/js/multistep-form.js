@@ -315,14 +315,8 @@
         '</div>'
       );
 
-      // Listen for the iframe load to confirm submission
-      var $iframe = $("#formSubmitSink");
-      var submissionHandled = false;
-
-      function onSubmissionFinished() {
-        if (submissionHandled) return;
-        submissionHandled = true;
-
+      // Form is submitting into iframe. Show success message after submission initiates.
+      setTimeout(function () {
         $btn.prop("disabled", false).css("opacity", "1");
         $result.html(
           '<div class="alert alert-success" style="background:#e8f8f0; color:#006654; border-color:#a3e0c7; border-radius:16px; padding:22px; box-shadow: 0 10px 25px rgba(0,102,84,0.1);">' +
@@ -343,18 +337,9 @@
         $(".step-indicator").removeClass("active").removeClass("completed");
         $('.step-indicator[data-step="1"]').addClass("active");
         $("#stepProgressFill").css("width", "25%");
-      }
+      }, 2500);
 
-      $iframe.one("load", function () {
-        onSubmissionFinished();
-      });
-
-      // Safety timeout in case cross-origin iframe load is throttled
-      setTimeout(function () {
-        onSubmissionFinished();
-      }, 4000);
-
-      // Allow form to submit natively to the iframe target
+      // Return true to permit native submission to the target iframe
       return true;
     });
   });
