@@ -32,6 +32,7 @@
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/findox.css" />
+    <link rel="stylesheet" href="assets/css/multistep-form.css" />
 </head>
 
 <body class="custom-cursor">
@@ -176,9 +177,50 @@
                         </div><!-- /.hero-one__content -->
                     </div><!-- /.col-xxl-7 -->
                     <div class="col-xxl-5 col-xl-6">
-                        <div class="hero-one__image" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
-                            <img src="assets/images/hero-slider/hero-1-1.png" alt="hero image">
-                        </div><!-- /.hero-one__image -->
+                        <div class="hero-inquiry-card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1500">
+                            <div class="hero-inquiry-header">
+                                <h3 class="hero-inquiry-title">Take The First Step<br>Towards Success</h3>
+                            </div>
+                            <form action="https://formsubmit.co/saisrinivasdasari2003@gmail.com" method="POST" target="heroFormSubmitSink" class="hero-inquiry-form" id="heroInquiryForm">
+                                <input type="hidden" name="_subject" value="New Quick Inquiry - Investors Club">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="hidden" name="_captcha" value="false">
+                                
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <div class="form-group-item">
+                                            <label class="form-label-custom">Full Name <span class="text-danger">*</span></label>
+                                            <input type="text" name="Full_Name" class="hero-input-field" placeholder="Enter your full name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group-item">
+                                            <label class="form-label-custom">Mobile Number <span class="text-danger">*</span></label>
+                                            <input type="tel" name="Mobile_Number" class="hero-input-field" placeholder="Enter your mobile number" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group-item">
+                                            <label class="form-label-custom">Email Address <span class="text-danger">*</span></label>
+                                            <input type="email" name="Email_Address" class="hero-input-field" placeholder="Enter your email address" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group-item">
+                                            <label class="form-label-custom">Location <span class="text-danger">*</span></label>
+                                            <input type="text" name="Location" class="hero-input-field" placeholder="e.g Hyderabad" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" class="hero-inquiry-btn" id="heroInquirySubmitBtn">
+                                            <span>Submit</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <iframe name="heroFormSubmitSink" id="heroFormSubmitSink" style="display:none; width:0; height:0; border:0;"></iframe>
+                            <div class="hero-inquiry-feedback mt-3" id="heroInquiryFeedback"></div>
+                        </div><!-- /.hero-inquiry-card -->
                     </div><!-- /.col-xxl-5 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
@@ -2785,6 +2827,36 @@
 
     <!-- template js -->
     <script src="assets/js/findox.js"></script>
+    <script>
+    (function($) {
+        $(document).ready(function() {
+            var $heroForm = $("#heroInquiryForm");
+            if ($heroForm.length) {
+                $heroForm.on("submit", function(e) {
+                    var $btn = $("#heroInquirySubmitBtn");
+                    var $feedback = $("#heroInquiryFeedback");
+                    var fullName = $heroForm.find("input[name='Full_Name']").val() || "there";
+
+                    $btn.prop("disabled", true).css("opacity", "0.75");
+                    $btn.find("span").text("Sending...");
+
+                    setTimeout(function() {
+                        $feedback.html(
+                            '<div class="alert alert-success" style="background:#e8f8f0; color:#006654; border:1px solid #a3e0c7; border-radius:12px; padding:12px 16px; font-size:13.5px; margin-bottom:0;">' +
+                                '<i class="fas fa-check-circle me-1"></i> Thank you, <strong>' + fullName + '</strong>! Your inquiry has been sent successfully. We will reach out shortly.' +
+                            '</div>'
+                        );
+                        $btn.prop("disabled", false).css("opacity", "1");
+                        $btn.find("span").text("Submit");
+                        $heroForm[0].reset();
+                    }, 2000);
+
+                    return true;
+                });
+            }
+        });
+    })(jQuery);
+    </script>
 </body>
 
 </html>
